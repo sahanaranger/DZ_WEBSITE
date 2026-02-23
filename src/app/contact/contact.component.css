@@ -8,6 +8,7 @@
   color: white;
   text-align: center;
   padding: 100px 20px;
+  margin-top: 80px; /* FIX: Push hero below fixed header */
 }
 
 .contact-hero h1 {
@@ -59,6 +60,12 @@
   font-size: 15px;
   border-radius: 4px;
   box-sizing: border-box;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0b2a5b;
 }
 
 /* BUTTON */
@@ -70,6 +77,7 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 4px;
+  transition: 0.3s ease;
 }
 
 .contact-form button:hover {
@@ -94,6 +102,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 
 .popup {
@@ -114,19 +123,29 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 4px;
 }
 
-
-
-
+/* MAP */
 .map {
   margin-top: 20px;
   border-radius: 8px;
   overflow: hidden;
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 70px 20px;
+    margin-top: 70px; /* adjust if needed */
+  }
 
+  .contact-hero h1 {
+    font-size: 32px;
+  }
 
-
-
-
+  .contact-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}

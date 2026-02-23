@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeroComponent } from './hero/hero.component'; 
+import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -10,7 +11,8 @@ import { HeroComponent } from './hero/hero.component';
     RouterOutlet,
     NavbarComponent,
     FooterComponent,
-    HeroComponent 
+    HeroComponent,
+    HttpClientModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

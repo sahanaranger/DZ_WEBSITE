@@ -1,0 +1,71 @@
+.multiplant-section {
+  padding: 140px 8%;
+  background: #ffffff;
+}
+
+.multiplant-container {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.multiplant-text h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.multiplant-sub {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.multiplant-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.multiplant-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.multiplant-item p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Visual */
+
+.multiplant-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.multiplant-glow {
+  position: absolute;
+  width: 70%;
+  height: 320px;
+  background: radial-gradient(circle, #ffe8cc 0%, transparent 70%);
+  filter: blur(60px);
+  z-index: 1;
+}
+
+.multiplant-image {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 18px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 2;
+}

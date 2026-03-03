@@ -61,7 +61,7 @@
 }
 
 .demo-btn {
-  background: #7b4bb7;
+  background: #2F5DA8;
   color: white;
   border: none;
   padding: 10px 18px;
@@ -215,7 +215,6 @@
 
 
 
-
 /* ================= CABLE NXT FULL SCREEN DROPDOWN ================= */
 
 .cablenxt-dropdown {
@@ -225,23 +224,23 @@
   width: 100vw;
   height: calc(100vh - 75px);
   background: #ffffff;
-  padding: 100px 120px;
+  padding: 80px 120px; /* reduced spacing */
   z-index: 999;
   overflow-y: auto;
   animation: fadeIn 0.25s ease;
 }
 
-/* ================= 2x2 SECTION GRID ================= */
+/* ================= GRID LAYOUT (SIDE BY SIDE) ================= */
 
 .dropdown-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columns */
-  row-gap: 80px;
+  grid-template-columns: 1fr 1fr; /* 2 equal columns */
   column-gap: 120px;
+  row-gap: 40px;
 }
 
 /* ================= SECTION BLOCK ================= */
@@ -254,12 +253,12 @@
 /* ================= SECTION TITLE ================= */
 
 .dropdown-title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 18px;
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 }
 
 /* Colored underline */
@@ -269,14 +268,12 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 90%;          /* FIXED (was 300px) */
   height: 1px;
 }
 
 .intelligence::after { background: #00b894; }
-.domain::after       { background: #6c5ce7; }
-.margin::after       { background: #fd7e14; }
-.executive::after    { background: #0984e3; }
+.domain::after       { background: #2F5DA8; }
 
 /* ================= LIST STYLE ================= */
 
@@ -287,7 +284,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 /* ================= ITEMS ================= */
@@ -296,13 +293,25 @@
   font-size: 15px;
   color: #444;
   cursor: pointer;
-  white-space: nowrap;
   transition: 0.25s ease;
 }
 
 .dropdown-column li:hover {
   color: #7b4bb7;
   transform: translateX(4px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .dropdown-container {
+    grid-template-columns: 1fr; /* stack on mobile */
+    row-gap: 50px;
+  }
+
+  .cablenxt-dropdown {
+    padding: 60px 40px;
+  }
 }
 
 /* ================= ANIMATION ================= */

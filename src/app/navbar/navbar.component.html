@@ -26,8 +26,10 @@
         </a>
       </div>
 
-      <a class="menu-link">Cable.AI</a>
-      <a class="menu-link">Community</a>
+     <a routerLink="/cable-ai" routerLinkActive="active-tab" class="menu-link">
+      Cable.AI
+    </a>
+    <a class="menu-link">Community</a>
       <a class="menu-link">Pricing</a>
       <a class="menu-link">Help</a>
 
@@ -70,63 +72,54 @@
 
     </div>
 
-    <div class="mega-highlight-wrapper">
-      <h2 class="mega-highlight-text">
-        Explore the CableMaker Platform
-      </h2>
+  </div>
+<!-- ================= CableNXT Dropdown ================= -->
+<div class="cablenxt-dropdown" *ngIf="isNxtMenuOpen">
+
+  <div class="dropdown-container">
+
+    <!-- ================= COLUMN 1 ================= -->
+    <div class="dropdown-column">
+      <h4 class="dropdown-title intelligence">INTELLIGENCE</h4>
+      <ul>
+        <li routerLink="/nxt/pocket-margin-ai">
+          Pocket Margin AI (RFQ Level)
+        </li>
+
+        <li routerLink="/nxt/commodity-cost-simulation">
+          AI Cost Simulation (Copper Impact)
+        </li>
+
+        <li routerLink="/nxt/order-risk-detection">
+          AI Sales Order Cancellation Analytics
+        </li>
+
+        <li routerLink="/nxt/ai-dashboard">
+          AI Dashboard on Demand
+        </li>
+      </ul>
     </div>
 
-  </div>
+    <!-- ================= COLUMN 2 ================= -->
+    <div class="dropdown-column">
+      <h4 class="dropdown-title domain">DOMAIN CONTROL</h4>
+      <ul>
+        <li routerLink="/nxt/drum-traceability">
+          Drum-Level Traceability
+        </li>
 
-  <!-- ================= CableNXT Dropdown ================= -->
-  <div class="cablenxt-dropdown" *ngIf="isNxtMenuOpen">
+        <li routerLink="/nxt/multi-level-bom">
+          Multi-Level Cable BOM Engine
+        </li>
 
-    <div class="dropdown-container">
+        <li routerLink="/nxt/stage-validation">
+          Stage-Wise Production Validation
+        </li>
 
-      <!-- INTELLIGENCE -->
-<div class="dropdown-column">
-  <h4 class="dropdown-title intelligence">INTELLIGENCE</h4>
-  <ul>
-    <li routerLink="/nxt/pocket-margin-ai">Pocket Margin AI (RFQ Level)</li>
-    <li routerLink="/nxt/commodity-cost-simulation">Commodity Cost Simulation</li>
-    <li routerLink="/nxt/order-risk-detection">AI-Based Order Risk Detection</li>
-    <li routerLink="/nxt/margin-monitoring">Real-Time Margin Monitoring</li>
-  </ul>
-</div>
-
-<!-- DOMAIN CONTROL -->
-<div class="dropdown-column">
-  <h4 class="dropdown-title domain">DOMAIN CONTROL</h4>
-  <ul>
-    <li routerLink="/nxt/drum-traceability">Drum-Level Traceability</li>
-    <li routerLink="/nxt/multi-level-bom">Multi-Level Cable BOM Engine</li>
-    <li routerLink="/nxt/stage-validation">Stage-Wise Production Validation</li>
-    <li routerLink="/nxt/batch-genealogy">Batch Genealogy Tracking</li>
-  </ul>
-</div>
-
-<!-- MARGIN & RISK -->
-<div class="dropdown-column">
-  <h4 class="dropdown-title margin">MARGIN & RISK</h4>
-  <ul>
-    <li routerLink="/nxt/metal-price-integration">Copper & Aluminium Price Integration</li>
-    <li routerLink="/nxt/margin-validation">Margin Validation Engine</li>
-    <li routerLink="/nxt/profit-simulation">What-If Profitability Simulation</li>
-    <li routerLink="/nxt/credit-governance">Credit & Pricing Governance</li>
-  </ul>
-</div>
-
-<!-- EXECUTIVE CONTROL -->
-<div class="dropdown-column">
-  <h4 class="dropdown-title executive">EXECUTIVE CONTROL</h4>
-  <ul>
-    <li routerLink="/nxt/cxo-dashboard">CXO Intelligence Dashboard</li>
-    <li routerLink="/nxt/order-profitability">Order-Wise Profitability Analytics</li>
-    <li routerLink="/nxt/working-capital">Working Capital Visibility</li>
-    <li routerLink="/nxt/cross-plant-performance">Cross-Plant Performance Insights</li>
-  </ul>
-</div>
-
+        <li routerLink="/nxt/batch-genealogy">
+          Batch Genealogy Tracking
+        </li>
+      </ul>
     </div>
 
   </div>

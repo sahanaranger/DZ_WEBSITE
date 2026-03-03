@@ -4,16 +4,29 @@
   padding: 0 20px;
 }
 
+.section-title {
+  font-size: 34px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* ================= HERO ================= */
+
 .hero {
   padding: 90px 0 60px;
   text-align: center;
-  background: #ffffff;
 }
 
 .hero-title {
   font-family: 'Caveat', cursive;
   font-size: 58px;
   font-weight: 700;
+}
+
+.hero-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 38px;
+  margin-top: 15px;
 }
 
 .hero-description {
@@ -25,7 +38,10 @@
   margin-right: auto;
 }
 
-.highlight-yellow {
+/* Highlight */
+
+.highlight-yellow,
+.highlight-blue {
   position: relative;
   z-index: 1;
 }
@@ -37,10 +53,24 @@
   right: -6px;
   bottom: 6px;
   height: 18px;
-  background: #2f0bff;
+  background: #1707ff;
   z-index: -1;
   border-radius: 8px;
 }
+
+.highlight-blue::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  bottom: 4px;
+  height: 14px;
+  background: #3da9fc;
+  z-index: -1;
+  border-radius: 6px;
+}
+
+/* ================= SPLIT SECTION ================= */
 
 .split-section {
   padding: 70px 0;
@@ -60,7 +90,7 @@
 .image-box img {
   width: 85%;
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
 .text-box h2 {
@@ -75,15 +105,11 @@
   color: #555;
 }
 
+/* ================= CARDS ================= */
+
 .cards-section {
   padding: 80px 0;
   background: #ffffff;
-}
-
-.section-title {
-  font-size: 34px;
-  margin-bottom: 50px;
-  text-align: center;
 }
 
 .card-grid {
@@ -96,13 +122,19 @@
   padding: 30px;
   border-radius: 16px;
   background: #f9f9fc;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
   transition: 0.3s ease;
 }
 
 .info-card:hover {
   transform: translateY(-6px);
 }
+
+.info-card h3 {
+  margin-bottom: 12px;
+}
+
+/* ================= ROI ================= */
 
 .roi-section {
   padding: 80px 0;
@@ -113,7 +145,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .roi-card {
@@ -127,23 +159,13 @@
   font-size: 18px;
 }
 
-.erp-section {
-  padding: 80px 0;
-  background: #f3f4f8;
-  text-align: center;
-}
-
-.erp-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.erp-section p {
-  max-width: 800px;
+.roi-text {
+  max-width: 750px;
   margin: 0 auto;
-  font-size: 17px;
   color: #555;
 }
+
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
   .split-grid {
@@ -152,5 +174,9 @@
 
   .hero-title {
     font-size: 42px;
+  }
+
+  .hero-subtitle {
+    font-size: 28px;
   }
 }

@@ -27,8 +27,8 @@ import { BatchGenealogyComponent } from './pages/nxt/batch-genealogy/batch-genea
 import { CableAiComponent } from './pages/cable-ai/cable-ai.component';
 
 export const routes: Routes = [
-  // { path: 'home', component: HeroComponent },
-  { path: '', component: HeroComponent },
+  { path: 'home', component: HeroComponent },
+ 
 
   // CableMaker
   { path: 'cm/production-planning', component: ProductionPlanningComponent },
@@ -58,7 +58,7 @@ export const routes: Routes = [
   
   { path: 'demo', component: DemoComponent },
 
-  // { path: '', redirectTo: 'home', pathMatch: 'full' },
-  // { path: '**', redirectTo: 'home' }
-  { path: '**', redirectTo: '' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home' }
+
 ];
